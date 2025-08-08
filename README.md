@@ -1,78 +1,107 @@
-🗣️ Speech-to-Text Model
-This repository provides a straightforward implementation of a speech-to-text model using Python. The model is designed to convert spoken English into written text, leveraging the LibriSpeech dataset for training.​
-GitHub
-+1
-Hugging Face
-+1
 
-🔧 Features
-Model Architecture: Utilizes a simple Recurrent Neural Network (RNN) with Long Short-Term Memory (LSTM) units.
+# 🗣️ Speech-to-Text Model  
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)  
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
+[![Status](https://img.shields.io/badge/Status-Active-success)]()
 
-Input Processing: Accepts Mel-frequency cepstral coefficients (MFCCs) extracted from audio signals.
+The **Speech-to-Text Model** is a Python-based voice recognition system that listens to your microphone input and automatically types text into any active text editor or document.  
+It also includes a **floating microphone icon** built with PyQt5 for starting and stopping the transcription process with a single click.
 
-Training Dataset: Trained on the LibriSpeech dataset, a large corpus of read English speech.
+---
 
-Output: Generates transcriptions of spoken English into written text.​
-GitHub
+## 🚀 Features
 
-🧪 Requirements
-Python 3.x
+✅ **Real-Time Speech Recognition** – Converts spoken English to text instantly.  
+✅ **Command Support** – Special voice commands:  
+   - `"next line"` → Adds a line break  
+   - `"full stop"` → Adds a period  
+   - `"delete"` → Deletes last word  
+   - `"redo"` / `"undo"` → Redo or undo text changes  
+   - `"next subtitle"` / `"title"` → Creates formatted headings  
+   - `"stop"` → Terminates the program  
+✅ **GUI Control** – Floating microphone icon to start/stop transcription.  
+✅ **Automatic Formatting** – Applies bold and font size formatting to titles/subtitles.
 
-Keras
+---
 
-TensorFlow
+## 🛠 Built With
 
-LibriSpeech dataset (for training and evaluation)​
+- **Python 3.x**
+- [SpeechRecognition](https://pypi.org/project/SpeechRecognition/) – Speech-to-text processing  
+- [PyAutoGUI](https://pypi.org/project/PyAutoGUI/) – Automating keyboard typing and formatting  
+- [PyQt5](https://pypi.org/project/PyQt5/) – Floating microphone GUI  
+- **Google Speech API** – For accurate speech recognition
 
-🚀 Installation
-Clone this repository to your local machine:​
-GitHub
-+1
-Hugging Face
-+1
+---
 
-bash
-Copy
-Edit
+## 📦 Installation
+
+```bash
+# Clone the repository
 git clone https://github.com/SathishK-official/Speech-to-Text-Model.git
-Install the required Python libraries:​
+cd Speech-to-Text-Model
 
-bash
-Copy
-Edit
+# Install dependencies
 pip install -r requirements.txt
-Download and preprocess the LibriSpeech dataset. Detailed instructions can be found on the LibriSpeech website.​
-GitHub
-+1
-Hugging Face
-+1
+````
 
-📄 Usage
-To train the model, run the following script:​
+**Requirements:**
 
-bash
-Copy
-Edit
+* Working **microphone**
+* Python 3.8+
+* Active internet connection (for Google Speech API)
+
+---
+
+## 📜 Usage
+
+### ▶ Run via Floating Mic (GUI)
+
+```bash
+python app.py
+```
+
+* Click the mic icon to start/stop speech recognition.
+* Drag the icon anywhere on your screen.
+
+### ▶ Run Directly
+
+```bash
 python main.py
-This will initiate the training process using the preprocessed LibriSpeech dataset.​
+```
 
-📚 Model Architecture
-The model employs a simple RNN with LSTM units, suitable for educational purposes and understanding the basics of speech-to-text systems.​
-GitHub
+* Focus your text editor within **5 seconds**.
+* Start speaking — the program will type your speech in real-time.
 
-📄 References
-LibriSpeech dataset: http://www.openslr.org/12/
+---
 
-Keras documentation: https://keras.io/
+## 📸 Demo
 
-TensorFlow documentation: https://www.tensorflow.org/​
-arXiv
-+3
-GitHub
-+3
-arXiv
-+3
+### Floating Mic GUI
 
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.​
-GitHub
+![Floating Mic GUI](img.png)
+
+
+
+---
+
+## ⚠ Notes
+
+* **Internet Required** – Google Speech API requires an active internet connection.
+* Works best in quiet environments for higher accuracy.
+* Tested on Windows with MS Word, Notepad, and Google Docs.
+
+---
+
+## 🤝 Contributing
+
+1. Fork this repository
+2. Create a new branch (`feature/YourFeature`)
+3. Commit your changes
+4. Push to your branch and open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
